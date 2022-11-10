@@ -72,6 +72,39 @@ body {
   font-family: "ubuntu";
 }
 
+
+/* next page button */
+
+.btn-next--page {
+	font-family: "ubuntu";
+	color: #FFF;
+	font-size: 1.6rem;
+	border-radius: 5px;
+	border: 0 solid #00cf03 ;
+	background: linear-gradient(180deg, #00fa19 5%, #06bd31 100%);
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-flex;
+  float: right;
+  margin-right: 2rem;
+}
+.btn-next--page:hover {
+	background: linear-gradient(180deg, #00cf03 5%, #00db04 100%);
+}
+.btn-next--page-icon {
+	padding: 1rem;
+	border-right: .1rem solid rgba(255, 255, 255, 0.16);
+	box-shadow: rgba(0, 0, 0, 0.14) -.1rem 0 0 inset;
+}
+.btn-next--page-icon svg {
+	vertical-align: middle;
+	position: relative;
+}
+.btn-next--page-text {
+	padding: 1rem 1.8rem;
+  text-transform: uppercase;
+}
+
 /* Header section style */
 
 .main-header {
@@ -108,6 +141,7 @@ body {
   margin: 2rem 0 4rem;
   width: 30rem;
   margin-left: 2rem;
+
 }
 
 .form-control input {
@@ -139,6 +173,7 @@ body {
   font-size: 1.8rem;
   min-width: 0.5rem;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
 }
 
 .form-control input:focus + label span,
@@ -152,16 +187,19 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
 }
 
 .btn {
-	color: #FFFFFF;
-	font-size: 1.8rem;
-	border-radius: .9rem;
-	background: linear-gradient(180deg, #00db04 5%, #00cf03 100%);
+  font-family: "ubuntu";
+	color: #FFF;
+	font-size: 1.6rem;
+	border-radius: 5px;
+	border: 0 solid #00cf03 ;
+	background: linear-gradient(180deg, #00fa19 5%, #06bd31 100%);
+	text-decoration: none;
 	cursor: pointer;
 	display: inline-flex;
-	align-items: center;
-  height: 3.6rem;
-  margin-top: 12rem;
-  margin-left: 2rem;
+  float: right;
+  margin-top: 8rem;
+  margin-left: 6rem;
+  height: 4rem;
 }
 
 .btn:hover {
@@ -186,21 +224,26 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
 
 
 /* Part 1 : Data render container styles */
-.data-render{
+.data-render {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-top: 10rem;
+  margin-bottom: 50rem;
+}
+
+.data-render input{
+  width: 80%;
 }
 
 .left-container{
   width: 40%;
   position: absolute;
   left: 5rem;
+  border: .2rem solid #1C561C;
+  border-radius: 2rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  height: 50vh;
 }
-
-/* .form-render{
-  display: none;
-} */
 
 
 /* Part 2: Student info container styles */
@@ -211,6 +254,7 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
   border: .2rem solid #1C561C;
   border-radius: 2rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  height: 50vh;
 }
 
 .input-form-two{
@@ -221,4 +265,79 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
   font-size: 3rem;
   color: #00db04;
   margin:2rem;
+}
+
+
+/* ///////////////////////////////// */
+
+/* Student info page */
+
+.input-box{
+  float: right;
+  position: relative;
+  height: 5.5rem;
+  max-width: 5.5rem;
+  width: 100%;
+  margin-right: 4rem ;
+  border-radius: .6rem;
+  background-color: #fff;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+}
+.input-box.open{
+  max-width: 35rem;
+}
+input{
+  position: relative;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: .6rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+.input-box.open{
+  padding: 0 1.5rem 0 6.5rem;
+}
+.icon{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  border-radius: .6rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+.search-icon,
+.close-icon{
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-right: 2rem;
+}
+.search-icon{
+  color: #00db04;
+  transform: translateY(-50%) rotate(90deg);
+}
+.input-box.open .search-icon{
+  transform: translateY(-50%) rotate(0);
+}
+.close-icon{
+  right: -4.5rem;
+  color: #00db04;
+  padding: .5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-box.open .close-icon{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) rotate(180deg);
 }
