@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USAL Library Management</title>
+
+  <!-- Css links -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FavIcon link -->
+  <link rel="icon" href="img/favicon.ico">
+
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+
+  <!-- Header (name and logo) -->
+  <section class="headerSection">
+    <div class="main-header">
+      <img class="header-img" src="img/usalLogo.png" alt="usal logo png ">
+      <h1 class="header-title">USAL Library Management System</h1>
+    </div>
+    <div class="description">
+      <p>Borrowing System</p>
+    </div>
+  </section>
+
+  <!-- Forms input section -->
+  <form class="input-form form" id="main-form" action="#">
+
+    <!-- Student ID input field -->
+    <div class="form-control">
+      <input type="text" id="student-id" required>
+      <label>Student ID</label>
+    </div>
+
+    <!-- Book id input field -->
+    <div class="form-control">
+      <input type="text" id="book-id" required>
+      <label>Book ID</label>
+    </div>
+
+    <!-- Date of borrowing input field -->
+    <div class="form-control">
+      <input type="date" id="date-of-borrow" required>
+      <label>Date of Borrowing</label>
+    </div>
+
+    <!-- Date of return input field -->
+    <div class="form-control">
+      <input type="date" id="date-of-return" required>
+      <label>Date of Return</label>
+    </div>
+
+    <a class="btn">
+      <span class="btn-icon"><svg width="16" height="16" viewBox="2 2 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M14.643 17C15.979 17 17 15.845 17 14.5V7H3v7.5C3 15.845 4.021 17 5.357 17h9.286zM8 9a.5.5 0 000 1h4a.5.5 0 000-1H8zM3 3a1 1 0 00-1 1v1.5a1 1 0 001 1h14a1 1 0 001-1V4a1 1 0 00-1-1H3z"
+            clip-rule="evenodd" />
+        </svg></span>
+      <span class="btn-text">submit</span>
+    </a>
+  </form>
+
+  <!-- Data rendering after inializing -->
+  <section class="data-render">
+
+    <!-- display data from input -->
+    <div class="left-container">
+     <form action="#" class="data-render form-render">
+
+      <!-- Render student id -->
+      <div class="form-control">
+        <input type="text">
+        <label>Student ID</label>
+        </div>
+
+        <!-- render book id -->
+      <div class="form-control">
+        <input type="text">
+        <label>Book ID</label>
+        </div>
+
+        <!-- Render date of borrow -->
+      <div class="form-control">
+        <input type="text">
+        <label>Date of Borrow</label>
+        </div>
+
+        <!-- render date of return -->
+      <div class="form-control">
+        <input type="text">
+        <label>Date of Return</label>
+        </div>
+     </form>
+    </div>
+
+    <!-- Student info input form -->
+    <div class="right-container">
+     <div>
+      <h3 class="info-header">Student Info</h3>
+     </div>
+      <form class="input-form-two">
+
+        <!-- Student Name input field -->
+        <div class="form-control">
+          <input type="text" id="student-name" required>
+          <label>Student Name</label>
+        </div>
+
+        <!-- Student id input field -->
+        <div class="form-control">
+          <input type="text" id="student-id" required>
+          <label>Student ID</label>
+        </div>
+
+        <!-- email input field -->
+        <div class="form-control">
+          <input type="email" id="email" pattern=".+@gmail.com" required>
+          <label>Email</label>
+        </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- JS server -->
+  <script src="script.js"></script>
+</body>
+
+</html>
