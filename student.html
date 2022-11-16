@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,10 @@
 
   <!-- Css links -->
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- FavIcon link -->
   <link rel="icon" href="img/favicon.ico">
-  
+
   <!-- Google fonts link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +20,13 @@
 
   <!-- Unicons CSS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  
+
 </head>
-<body>
+
+<>
 
 
-<!-- Search input field -->
+  <!-- Search input field -->
   <div class="input-box">
     <input type="text" placeholder="Search...">
     <span class="icon">
@@ -45,37 +47,50 @@
     </div>
   </section>
 
-  <!-- Table info section -->
-  <section class="table-info">
-    <div class="form-table">
+  <!-- Data rendering after inializing -->
+  <div class="data">
+    <div class="container">
 
-      <!-- student name -->
-      <label for="name">Student Name</label>
+      <!-- display data from input -->
+      <div class="left-container">
+        <div>
+          <h3 class="info-header">Student Borrow</h3>
+        </div>
+
+        <form action="#" class="data-render">
+
+          <!-- Render student id -->
+          <div class="form-control form2">
+            <input type="text">
+            <label>Student ID</label>
+          </div>
+
+          <!-- render book id -->
+          <div class="form-control form2">
+            <input type="text">
+            <label>Book ID</label>
+          </div>
+
+          <!-- Render date of borrow -->
+          <div class="form-control form2">
+            <input type="text">
+            <label>Date of Borrow</label>
+          </div>
+
+          <!-- render date of return -->
+          <div class="form-control form2">
+            <input type="text">
+            <label>Date of Return</label>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 
-    <!-- Student ID -->
-    <div class="form-table">
-      <label for="id">Student ID</label>
-    </div>
 
-    <!-- Book id -->
-    <div class="form-table">
-      <label for="bookID">Book ID</label>
-    </div>
 
-    <!-- Date of borrow -->
-    <div class="form-table">
-      <label for="date">Date of Borrow</label>
-    </div>
-
-    <!-- Date of return -->
-    <div class="form-table">
-      <label for="date">Date of Return</label>
-    </div>
-  </section>
-
-  
   <!-- js link -->
   <script src="script.js"></script>
-</body>
+  </body>
+
 </html>
